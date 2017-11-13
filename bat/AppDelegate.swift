@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Locksmith
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        window?.rootViewController = NavigationController(rootViewController: HomeVC())
         window?.makeKeyAndVisible()
+
+        let HomeNC = NavigationController(rootViewController: HomeVC())
+
+        let locationManager = LocationManager.shared
+        locationManager.requestWhenInUseAuthorization()
+        
+        if let _ = Locksmith.loadDataForUserAccount(userAccount: "api-user") {
+            print("User logged in")
+            window?.rootViewController = HomeNC
+        } else {
+            print("User not logged in")
+            window?.rootViewController = LoginVC()
+        }
+
         return true
     }
 
