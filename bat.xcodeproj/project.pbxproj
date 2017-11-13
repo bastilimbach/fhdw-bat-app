@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD15725B1FA8F15C004112B8 /* ThreeStateSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15725A1FA8F15C004112B8 /* ThreeStateSwitch.swift */; };
+		FD3989A11FA9529400045EFE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3989A01FA9529400045EFE /* Destination.swift */; };
+		FD9314191FB25A6B000A9FFB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9314181FB25A6B000A9FFB /* SettingsVC.swift */; };
+		FD93141B1FB265AC000A9FFB /* EditButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93141A1FB265AC000A9FFB /* EditButtonVC.swift */; };
+		FD9D727B1FAA567A009C6881 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D727A1FAA567A009C6881 /* Extensions.swift */; };
+		FDDD2B361FA124C600B44D31 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDD2B351FA124C600B44D31 /* Locksmith.framework */; };
+		FDDD2B381FA125C800B44D31 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD2B371FA125C800B44D31 /* LoginVC.swift */; };
 		FDF896B51F8CD66A00BE6606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF896B41F8CD66A00BE6606 /* AppDelegate.swift */; };
 		FDF896B71F8CD66A00BE6606 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF896B61F8CD66A00BE6606 /* HomeVC.swift */; };
 		FDF896BC1F8CD66A00BE6606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF896BB1F8CD66A00BE6606 /* Assets.xcassets */; };
 		FDF896BF1F8CD66A00BE6606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF896BD1F8CD66A00BE6606 /* LaunchScreen.storyboard */; };
 		FDF896C71F8CDAA600BE6606 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF896C61F8CDAA600BE6606 /* NavigationController.swift */; };
-		FDF896C91F8CDC5F00BE6606 /* StartTrackingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF896C81F8CDC5F00BE6606 /* StartTrackingButton.swift */; };
+		FDF896CD1F8CE71100BE6606 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF896CC1F8CE71100BE6606 /* LocationManager.swift */; };
+		FDF896D41F8CF2E500BE6606 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF896D31F8CF2E500BE6606 /* User.swift */; };
+		FDF896D61F8CF41500BE6606 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF896D51F8CF41500BE6606 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD15725A1FA8F15C004112B8 /* ThreeStateSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeStateSwitch.swift; sourceTree = "<group>"; };
+		FD3989A01FA9529400045EFE /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		FD9314181FB25A6B000A9FFB /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		FD93141A1FB265AC000A9FFB /* EditButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonVC.swift; sourceTree = "<group>"; };
+		FD9D727A1FAA567A009C6881 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FDDD2B351FA124C600B44D31 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		FDDD2B371FA125C800B44D31 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FDDD2B391FA1269C00B44D31 /* bat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bat.entitlements; sourceTree = "<group>"; };
 		FDF896B11F8CD66A00BE6606 /* bat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF896B41F8CD66A00BE6606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF896B61F8CD66A00BE6606 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -23,7 +40,9 @@
 		FDF896BE1F8CD66A00BE6606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDF896C01F8CD66A00BE6606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF896C61F8CDAA600BE6606 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		FDF896C81F8CDC5F00BE6606 /* StartTrackingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrackingButton.swift; sourceTree = "<group>"; };
+		FDF896CC1F8CE71100BE6606 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FDF896D31F8CF2E500BE6606 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FDF896D51F8CF41500BE6606 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +50,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDD2B361FA124C600B44D31 /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD9D72791FAA566A009C6881 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FD9D727A1FAA567A009C6881 /* Extensions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FDDD2B341FA124C600B44D31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDDD2B351FA124C600B44D31 /* Locksmith.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDF896A81F8CD66A00BE6606 = {
 			isa = PBXGroup;
 			children = (
 				FDF896B31F8CD66A00BE6606 /* bat */,
 				FDF896B21F8CD66A00BE6606 /* Products */,
+				FDDD2B341FA124C600B44D31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +93,48 @@
 		FDF896B31F8CD66A00BE6606 /* bat */ = {
 			isa = PBXGroup;
 			children = (
+				FDDD2B391FA1269C00B44D31 /* bat.entitlements */,
+				FD9D72791FAA566A009C6881 /* Helper */,
+				FDF896D01F8CF21E00BE6606 /* Model */,
+				FDF896CF1F8CF21300BE6606 /* Controller */,
+				FDF896CE1F8CF20800BE6606 /* View */,
 				FDF896B41F8CD66A00BE6606 /* AppDelegate.swift */,
-				FDF896B61F8CD66A00BE6606 /* HomeVC.swift */,
-				FDF896C61F8CDAA600BE6606 /* NavigationController.swift */,
-				FDF896C81F8CDC5F00BE6606 /* StartTrackingButton.swift */,
 				FDF896BB1F8CD66A00BE6606 /* Assets.xcassets */,
 				FDF896BD1F8CD66A00BE6606 /* LaunchScreen.storyboard */,
 				FDF896C01F8CD66A00BE6606 /* Info.plist */,
 			);
 			path = bat;
+			sourceTree = "<group>";
+		};
+		FDF896CE1F8CF20800BE6606 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD15725A1FA8F15C004112B8 /* ThreeStateSwitch.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDF896CF1F8CF21300BE6606 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FDF896B61F8CD66A00BE6606 /* HomeVC.swift */,
+				FDDD2B371FA125C800B44D31 /* LoginVC.swift */,
+				FD9314181FB25A6B000A9FFB /* SettingsVC.swift */,
+				FD93141A1FB265AC000A9FFB /* EditButtonVC.swift */,
+				FDF896C61F8CDAA600BE6606 /* NavigationController.swift */,
+				FDF896CC1F8CE71100BE6606 /* LocationManager.swift */,
+				FDF896D51F8CF41500BE6606 /* NetworkManager.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FDF896D01F8CF21E00BE6606 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDF896D31F8CF2E500BE6606 /* User.swift */,
+				FD3989A01FA9529400045EFE /* Destination.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +147,7 @@
 				FDF896AD1F8CD66A00BE6606 /* Sources */,
 				FDF896AE1F8CD66A00BE6606 /* Frameworks */,
 				FDF896AF1F8CD66A00BE6606 /* Resources */,
+				FDDD2B331FA1241800B44D31 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -100,6 +171,14 @@
 					FDF896B01F8CD66A00BE6606 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -133,15 +212,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FDDD2B331FA1241800B44D31 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Locksmith.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDF896AD1F8CD66A00BE6606 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9314191FB25A6B000A9FFB /* SettingsVC.swift in Sources */,
 				FDF896B71F8CD66A00BE6606 /* HomeVC.swift in Sources */,
-				FDF896C91F8CDC5F00BE6606 /* StartTrackingButton.swift in Sources */,
+				FDF896CD1F8CE71100BE6606 /* LocationManager.swift in Sources */,
+				FDF896D61F8CF41500BE6606 /* NetworkManager.swift in Sources */,
+				FD93141B1FB265AC000A9FFB /* EditButtonVC.swift in Sources */,
+				FDDD2B381FA125C800B44D31 /* LoginVC.swift in Sources */,
 				FDF896C71F8CDAA600BE6606 /* NavigationController.swift in Sources */,
+				FD9D727B1FAA567A009C6881 /* Extensions.swift in Sources */,
+				FD3989A11FA9529400045EFE /* Destination.swift in Sources */,
+				FD15725B1FA8F15C004112B8 /* ThreeStateSwitch.swift in Sources */,
 				FDF896B51F8CD66A00BE6606 /* AppDelegate.swift in Sources */,
+				FDF896D41F8CF2E500BE6606 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +374,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bat/bat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62M3E2NF3A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = bat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sebastianlimbach.bat;
@@ -285,8 +394,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bat/bat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62M3E2NF3A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = bat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sebastianlimbach.bat;
