@@ -15,6 +15,12 @@ final class HomeVC: UIViewController {
     private let locationManager = LocationManager.shared
     private var isTracking = false
 
+    private let placeholder: ArtefactsImage = {
+        let view = ArtefactsImage()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     private lazy var locationSwitch: ThreeStateSwitch = {
         let threeStateSwitch = ThreeStateSwitch()
         threeStateSwitch.leftStateIcon = UIImage(named: "currentLocationIcon")
@@ -24,9 +30,15 @@ final class HomeVC: UIViewController {
         return threeStateSwitch
     }()
 
-    private lazy var logoView: UIImageView = {
+    private lazy var logoView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "fhdwLogo")!.resizeImage(withNewHeight: 100)
+        imageView.image = UIImage(named: "fhdwLogo")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -70,11 +82,11 @@ final class HomeVC: UIViewController {
     }()
 
     private let destinations = [
+        Destination(id: 0, name: "FHDW Bergisch Gladbach"),
         Destination(id: 1, name: "FHDW Paderborn"),
-        Destination(id: 2, name: "FHDW Bergisch Gladbach"),
-        Destination(id: 3, name: "FHDW Bielefeld"),
-        Destination(id: 4, name: "FHDW Marburg"),
-        Destination(id: 5, name: "FHDW Mettmann")
+        Destination(id: 2, name: "FHDW Bielefeld"),
+        Destination(id: 3, name: "FHDW Marburg"),
+        Destination(id: 4, name: "FHDW Mettmann")
     ]
 
     override func viewDidLoad() {
@@ -108,9 +120,11 @@ final class HomeVC: UIViewController {
     }
 
     private func setupViews() {
+        view.addSubview(placeholder)
         view.addSubview(locationSwitch)
         view.addSubview(messageButtons)
         view.addSubview(logoView)
+        logoView.addSubview(logoImageView)
     }
 
     private func setupConstraints() {
@@ -118,6 +132,12 @@ final class HomeVC: UIViewController {
         let padding: CGFloat = 20
 
         NSLayoutConstraint.activate([
+            // Placeholder
+            placeholder.topAnchor.constraint(equalTo: margins.topAnchor, constant: 40),
+            placeholder.leftAnchor.constraint(equalTo: view.leftAnchor),
+            placeholder.rightAnchor.constraint(equalTo: view.rightAnchor),
+            placeholder.heightAnchor.constraint(equalToConstant: 100),
+
             // Switch
             locationSwitch.leftAnchor.constraint(equalTo: margins.leftAnchor),
             locationSwitch.rightAnchor.constraint(equalTo: margins.rightAnchor),
@@ -134,7 +154,12 @@ final class HomeVC: UIViewController {
             logoView.leftAnchor.constraint(equalTo: view.leftAnchor),
             logoView.rightAnchor.constraint(equalTo: view.rightAnchor),
             logoView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            logoView.heightAnchor.constraint(lessThanOrEqualToConstant: 200)
+            logoView.heightAnchor.constraint(equalToConstant: 150),
+
+            logoImageView.centerXAnchor.constraint(equalTo: logoView.centerXAnchor),
+            logoImageView.centerYAnchor.constraint(equalTo: logoView.centerYAnchor),
+            logoImageView.widthAnchor.constraint(lessThanOrEqualTo: logoView.widthAnchor, multiplier: 0.5),
+            logoImageView.heightAnchor.constraint(lessThanOrEqualTo: logoView.heightAnchor, multiplier: 0.8),
         ])
     }
 

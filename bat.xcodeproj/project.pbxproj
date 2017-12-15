@@ -11,6 +11,7 @@
 		FD3989A11FA9529400045EFE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3989A01FA9529400045EFE /* Destination.swift */; };
 		FD9314191FB25A6B000A9FFB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9314181FB25A6B000A9FFB /* SettingsVC.swift */; };
 		FD93141B1FB265AC000A9FFB /* EditButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93141A1FB265AC000A9FFB /* EditButtonVC.swift */; };
+		FD9BE5311FD3391B000C69FB /* ArtefactsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9BE5301FD3391B000C69FB /* ArtefactsImage.swift */; };
 		FD9D727B1FAA567A009C6881 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9D727A1FAA567A009C6881 /* Extensions.swift */; };
 		FDDD2B361FA124C600B44D31 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDD2B351FA124C600B44D31 /* Locksmith.framework */; };
 		FDDD2B381FA125C800B44D31 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD2B371FA125C800B44D31 /* LoginVC.swift */; };
@@ -29,6 +30,7 @@
 		FD3989A01FA9529400045EFE /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		FD9314181FB25A6B000A9FFB /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		FD93141A1FB265AC000A9FFB /* EditButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonVC.swift; sourceTree = "<group>"; };
+		FD9BE5301FD3391B000C69FB /* ArtefactsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtefactsImage.swift; sourceTree = "<group>"; };
 		FD9D727A1FAA567A009C6881 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FDDD2B351FA124C600B44D31 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 		FDDD2B371FA125C800B44D31 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				FD15725A1FA8F15C004112B8 /* ThreeStateSwitch.swift */,
+				FD9BE5301FD3391B000C69FB /* ArtefactsImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				FDF896CD1F8CE71100BE6606 /* LocationManager.swift in Sources */,
 				FDF896D61F8CF41500BE6606 /* NetworkManager.swift in Sources */,
 				FD93141B1FB265AC000A9FFB /* EditButtonVC.swift in Sources */,
+				FD9BE5311FD3391B000C69FB /* ArtefactsImage.swift in Sources */,
 				FDDD2B381FA125C800B44D31 /* LoginVC.swift in Sources */,
 				FDF896C71F8CDAA600BE6606 /* NavigationController.swift in Sources */,
 				FD9D727B1FAA567A009C6881 /* Extensions.swift in Sources */,

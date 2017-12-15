@@ -23,29 +23,10 @@ extension UIColor {
     class var fhdwLightBlue: UIColor {
         return UIColor.init(red: 60/255, green: 111/255, blue: 193/255, alpha: 1)
     }
-}
 
-extension UIImage {
-    func image(ofSize proposedSize: CGSize) -> UIImage? {
-        let scale = min(size.width/proposedSize.width, size.height/proposedSize.height)
-        let newSize = CGSize(width: size.width/scale, height: size.height/scale)
-        let newOrigin = CGPoint(x: (proposedSize.width - newSize.width)/2, y: (proposedSize.height - newSize.height)/2)
-        let thumbRect = CGRect(origin: newOrigin, size: newSize).integral
-        UIGraphicsBeginImageContextWithOptions(proposedSize, false, 0)
-        draw(in: thumbRect)
-        let result = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return result
-    }
-
-    func resizeImage(withNewHeight newHeight: CGFloat) -> UIImage? {
-        let scale = newHeight / size.height
-        let newWidth = size.width * scale
-        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-        draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
+    /// FHDW secondary color
+    class var fhdwLightGray: UIColor {
+        return UIColor.init(red: 197/255, green: 206/255, blue: 222/255, alpha: 1)
     }
 }
 
