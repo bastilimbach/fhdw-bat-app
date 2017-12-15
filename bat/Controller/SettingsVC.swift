@@ -9,7 +9,7 @@
 import UIKit
 import Locksmith
 
-class SettingsVC: UITableViewController {
+final class SettingsVC: UITableViewController {
 
     let quickMessageBtn1Option: UITableViewCell = {
         let cell = UITableViewCell()
