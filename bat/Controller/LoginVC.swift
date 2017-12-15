@@ -23,7 +23,7 @@ final class LoginVC: UIViewController {
         return view
     }()
 
-    private lazy var logoView: UIView = {
+    private lazy var logoBackgroundView: UIView = {
         let logoView = UIView()
         let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -32,6 +32,14 @@ final class LoginVC: UIViewController {
         logoView.addSubview(blurEffectView)
         logoView.translatesAutoresizingMaskIntoConstraints = false
         return logoView
+    }()
+
+    private lazy var logoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "fhdwLogoWhite")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
 
     private lazy var usernameInput: UITextField = {
@@ -107,7 +115,8 @@ final class LoginVC: UIViewController {
         view.sendSubview(toBack: backgroundImageView)
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-        contentView.addSubview(logoView)
+        contentView.addSubview(logoBackgroundView)
+        logoBackgroundView.addSubview(logoImageView)
         contentView.addSubview(usernameInput)
         contentView.addSubview(tokenInput)
         contentView.addSubview(loginButton)
@@ -140,13 +149,18 @@ final class LoginVC: UIViewController {
             contentView.widthAnchor.constraint(equalTo: view.widthAnchor),
 
             // Logo view
-            logoView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            logoView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            logoView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            logoView.heightAnchor.constraint(equalToConstant: 200),
+            logoBackgroundView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            logoBackgroundView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            logoBackgroundView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            logoBackgroundView.heightAnchor.constraint(equalToConstant: 200),
+
+            logoImageView.centerXAnchor.constraint(equalTo: logoBackgroundView.centerXAnchor),
+            logoImageView.centerYAnchor.constraint(equalTo: logoBackgroundView.centerYAnchor),
+            logoImageView.widthAnchor.constraint(lessThanOrEqualTo: logoBackgroundView.widthAnchor, multiplier: 0.5),
+            logoImageView.heightAnchor.constraint(lessThanOrEqualTo: logoBackgroundView.heightAnchor, multiplier: 0.8),
 
             // Username input
-            usernameInput.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: padding * 2),
+            usernameInput.topAnchor.constraint(equalTo: logoBackgroundView.bottomAnchor, constant: padding * 2),
 //            usernameInput.leftAnchor.constraint(equalTo: contentView.leftAnchor),
 //            usernameInput.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             usernameInput.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -164,7 +178,7 @@ final class LoginVC: UIViewController {
             loginButton.topAnchor.constraint(equalTo: tokenInput.bottomAnchor, constant: padding),
             loginButton.leftAnchor.constraint(equalTo: usernameInput.leftAnchor),
             loginButton.rightAnchor.constraint(equalTo: usernameInput.rightAnchor),
-            loginButton.heightAnchor.constraint(equalTo: tokenInput.heightAnchor, multiplier: 1.3),
+            loginButton.heightAnchor.constraint(equalTo: tokenInput.heightAnchor, multiplier: 1),
             loginButton.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor)
         ])
     }

@@ -39,7 +39,6 @@ final class NetworkManager {
     func update(location: (lat: Double, lng: Double), completion: @escaping (_ result: ResultType) -> ()) {
         DispatchQueue.global().async {
             let locationAPIPath = self.apiUrl.userPathSuffix().appendingPathComponent("/location")
-            print(locationAPIPath)
             var request = URLRequest(url: locationAPIPath)
             request.httpMethod = "PUT"
             request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
@@ -52,15 +51,17 @@ final class NetworkManager {
 
             let task = self.session.dataTask(with: request) { (data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
-                    print(httpResponse.statusCode)
-                    if httpResponse.statusCode == 200 {
-                        if let error = error {
-                            completion(.error(error: error))
-                        } else {
-                            completion(.success(data: data!))
-                        }
-                    } else {
+                    if let error = error {
+                        completion(.error(error: error))
+                    }
+
+                    switch (httpResponse.statusCode) {
+                    case 200:
+                        completion(.success(data: data!))
+                    case 401:
                         completion(.unauthorized)
+                    default:
+                        return
                     }
                 }
             }
@@ -70,28 +71,29 @@ final class NetworkManager {
 
     func update(destination: Destination?, completion: @escaping (_ result: ResultType) -> ()) {
         DispatchQueue.global().async {
-            let locationAPIPath = self.apiUrl.userPathSuffix().appendingPathComponent("/destination")
-            print(locationAPIPath)
-            var request = URLRequest(url: locationAPIPath)
+            let destinationAPIPath = self.apiUrl.userPathSuffix().appendingPathComponent("/destination")
+            var request = URLRequest(url: destinationAPIPath)
             request.httpMethod = "PUT"
             request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             request.addUserAuthorizationHeader()
             let bodyObject: [String : Any] = [
-                "destinationID": (destination?.id) ?? "null"
+                "destinationID": destination?.id as Any
             ]
             request.httpBody = try? JSONSerialization.data(withJSONObject: bodyObject, options: [])
 
             let task = self.session.dataTask(with: request) { (data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
-                    print(httpResponse.statusCode)
-                    if httpResponse.statusCode == 200 {
-                        if let error = error {
-                            completion(.error(error: error))
-                        } else {
-                            completion(.success(data: data!))
-                        }
-                    } else {
+                    if let error = error {
+                        completion(.error(error: error))
+                    }
+
+                    switch (httpResponse.statusCode) {
+                    case 200:
+                        completion(.success(data: data!))
+                    case 401:
                         completion(.unauthorized)
+                    default:
+                        return
                     }
                 }
             }
@@ -107,10 +109,9 @@ final class NetworkManager {
         }
 
         DispatchQueue.global().async {
-            let locationAPIPath = self.apiUrl.userPathSuffix().appendingPathComponent("/message")
-            print(locationAPIPath)
-            var request = URLRequest(url: locationAPIPath)
-            request.httpMethod = "POST"
+            let messageAPIPath = self.apiUrl.userPathSuffix().appendingPathComponent("/message")
+            var request = URLRequest(url: messageAPIPath)
+            request.httpMethod = "PUT"
             request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             request.addUserAuthorizationHeader()
 
@@ -122,15 +123,17 @@ final class NetworkManager {
 
             let task = self.session.dataTask(with: request) { (data, response, error) in
                 if let httpResponse = response as? HTTPURLResponse {
-                    print(httpResponse.statusCode)
-                    if httpResponse.statusCode == 200 {
-                        if let error = error {
-                            completion(.error(error: error))
-                        } else {
-                            completion(.success(data: data!))
-                        }
-                    } else {
+                    if let error = error {
+                        completion(.error(error: error))
+                    }
+
+                    switch (httpResponse.statusCode) {
+                    case 200:
+                        completion(.success(data: data!))
+                    case 401:
                         completion(.unauthorized)
+                    default:
+                        return
                     }
                 }
             }
