@@ -162,6 +162,7 @@ final class ThreeStateSwitch: UIControl {
                     case .middle:
                         self.sliderView.image = nil
                     }
+                    UISelectionFeedbackGenerator().selectionChanged()
                     self.sendActions(for: .valueChanged)
                 }
             })
@@ -176,6 +177,7 @@ final class ThreeStateSwitch: UIControl {
         }, completion: { finished in
             if finished {
                 self.currentState = .middle
+                UISelectionFeedbackGenerator().selectionChanged()
                 self.sendActions(for: .valueChanged)
             }
         })
